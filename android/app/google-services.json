@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583989356727",
+    "project_id": "halliangadi-b2c",
+    "storage_bucket": "halliangadi-b2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583989356727:android:bcb619d68fe0ac149fc532",
+        "android_client_info": {
+          "package_name": "com.simpfo.halliangadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583989356727-nedij3uk8dpi1mqsfdaokp1d024id8ua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkuVIUY-hXQly4yOuCyPGEBk78gWU9ALc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583989356727-nedij3uk8dpi1mqsfdaokp1d024id8ua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
