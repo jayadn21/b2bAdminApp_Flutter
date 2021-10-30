@@ -276,12 +276,6 @@ class _ProflieState extends State<Proflie> {
                         ),
                       ],
                     ),
-
-
-
-
-
-
                   ]),
             ),
           ),
