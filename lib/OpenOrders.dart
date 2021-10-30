@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -162,6 +163,22 @@ class _OpenOrdersState extends State<OpenOrders> {
             new IconButton(
               icon: new Icon(Icons.refresh),
               onPressed: () {
+                 ScaffoldMessenger.of(
+                        context)
+                        .showSnackBar(SnackBar(
+                        content: Text(
+                            "Refreshed list",
+                            textAlign:
+                            TextAlign
+                                .center),
+                        backgroundColor:
+                        Colors
+                            .black,
+                        padding:
+                        EdgeInsets.all(
+                            15),
+                        shape:
+                        StadiumBorder()));
                 refreshList();
               },
             ),
@@ -177,7 +194,7 @@ class _OpenOrdersState extends State<OpenOrders> {
                         color: Colors.white,
                       ),
                       decoration: new InputDecoration(
-                          prefixIcon: new Icon(Icons.search, color: Colors.white),
+                          prefixIcon: new Icon(Icons.close, color: Colors.white),
                           hintText: "Search...",
                           hintStyle: new TextStyle(color: Colors.white)),
                       onChanged: onItemChanged,

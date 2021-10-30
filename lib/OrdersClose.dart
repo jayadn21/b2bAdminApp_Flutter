@@ -132,7 +132,9 @@ class _OrdersCloseState extends State<OrdersClose> {
     //await Future.delayed(Duration(seconds: 2));
     getPostsData();
   }
-
+  void clearText() {
+    fieldText.clear();
+  }
 
  intl.DateFormat dateFormat = new intl.DateFormat("dd-MM-yyyy");
 
@@ -143,7 +145,7 @@ class _OrdersCloseState extends State<OrdersClose> {
           .toList();
     });
   }
-
+  final fieldText = TextEditingController();
   late Future<dynamic> _calculation = GetOrders(apiToken);
   @override
   Widget build(BuildContext context) {
@@ -160,25 +162,43 @@ class _OrdersCloseState extends State<OrdersClose> {
             new IconButton(
               icon: new Icon(Icons.refresh),
               onPressed: () {
+                ScaffoldMessenger.of(
+                    context)
+                    .showSnackBar(SnackBar(
+                    content: Text(
+                        "Refreshed list",
+                        textAlign:
+                        TextAlign
+                            .center),
+                    backgroundColor:
+                    Colors
+                        .black,
+                    padding:
+                    EdgeInsets.all(
+                        15),
+                    shape:
+                    StadiumBorder()));
                 refreshList();
               },
             ),
             new IconButton(
               icon: actionIcon,
               onPressed: () {
+                clearText();
                 setState(() {
                   if (this.actionIcon.icon == Icons.search) {
-                    this.actionIcon = new Icon(Icons.arrow_back);
+                    this.actionIcon = new Icon(Icons.close);
                     this.appBarTitle = new TextField(
+                      cursorColor: Colors.white,
                       style: new TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
                       ),
+                      controller: fieldText,
                       decoration: new InputDecoration(
-                          prefixIcon: new Icon(Icons.search, color: Colors.white),
+                          prefixIcon: new Icon(Icons.arrow_back, color: Colors.white),
                           hintText: "Search...",
                           hintStyle: new TextStyle(color: Colors.white)),
-                      onChanged: onItemChanged,
+                     /* onChanged: onItemChanged,*/
                     );
                   } else {
                     this.actionIcon = new Icon(Icons.search);

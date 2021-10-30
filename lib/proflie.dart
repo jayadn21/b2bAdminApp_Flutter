@@ -285,22 +285,3 @@ class _ProflieState extends State<Proflie> {
   }
 }
 
-Widget _genderWidget(bool _showOthers, bool _alignment) {
-  return Container(
-    alignment: Alignment.center,
-    child: GenderPickerWithImage(
-      showOtherGender: _showOthers,
-      verticalAlignedText: _alignment,
-      onChanged: (Gender? _gender) {},
-      selectedGender: Gender.Male,
-      selectedGenderTextStyle: TextStyle(fontWeight: FontWeight.bold),
-      unSelectedGenderTextStyle: TextStyle(fontWeight: FontWeight.normal),
-      equallyAligned: true,
-      size: 64,
-      animationDuration: Duration(seconds: 1),
-      isCircular: true,
-      opacityOfGradient: 0.7,
-      padding: EdgeInsets.all(10.0),
-    ),
-  );
-}

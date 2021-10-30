@@ -80,7 +80,7 @@ class _NavBarState extends State<NavBar> {
                   child: Container(
                     width: 250,
                     margin: EdgeInsets.only(right: 3),
-                    height: 130,
+                    height: 150,
                     decoration: BoxDecoration(
                         color: Colors.blue.shade400,
                         borderRadius: BorderRadius.all(Radius.circular(20.0))),
