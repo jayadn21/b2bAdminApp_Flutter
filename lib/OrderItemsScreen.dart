@@ -241,6 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: categoriesScroller),
             ),
             Expanded(
+              flex: 1,
                 child: ListView.builder(
                     controller: controller,
                     itemCount: itemsData.length,

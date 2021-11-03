@@ -218,13 +218,46 @@ class _ProflieState extends State<Proflie> {
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        compName,
-                                        style: TextStyle(
-                                          fontSize: 22,
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            compName,
+                                            style: TextStyle(
+                                              fontSize: 22,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 90,
+                                          ),
+                                          IconButton(
+                                            icon: Icon(
+                                              FontAwesomeIcons.file,
+                                            ),
+                                            iconSize: 25,
+                                            color: Colors.blue,
+                                            onPressed: () {
+                                              FlutterClipboard.copy(compName+compAddress).then(
+                                                      (value) => ScaffoldMessenger.of(
+                                                      context)
+                                                      .showSnackBar(SnackBar(
+                                                      content: Text(
+                                                          "copy to clipboard",
+                                                          textAlign:
+                                                          TextAlign
+                                                              .center),
+                                                      backgroundColor:
+                                                      Colors
+                                                          .indigoAccent,
+                                                      padding:
+                                                      EdgeInsets.all(
+                                                          20),
+                                                      shape:
+                                                      StadiumBorder())));
+                                            },
+                                          ),
+                                        ],
                                       ),
                                       Text(
                                         compAddress,
@@ -234,39 +267,7 @@ class _ProflieState extends State<Proflie> {
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
-                                      Row(
-                                        children:[
-                                          Padding(
-                                            padding: const EdgeInsets.fromLTRB(200, 0 , 0, 0),
-                                            child: IconButton(
-                                              icon: Icon(
-                                                FontAwesomeIcons.file,
-                                              ),
-                                              iconSize: 25,
-                                              color: Colors.blue,
-                                              onPressed: () {
-                                                FlutterClipboard.copy(compAddress).then(
-                                                        (value) => ScaffoldMessenger.of(
-                                                        context)
-                                                        .showSnackBar(SnackBar(
-                                                        content: Text(
-                                                            "copy to clipboard",
-                                                            textAlign:
-                                                            TextAlign
-                                                                .center),
-                                                        backgroundColor:
-                                                        Colors
-                                                            .indigoAccent,
-                                                        padding:
-                                                        EdgeInsets.all(
-                                                            20),
-                                                        shape:
-                                                        StadiumBorder())));
-                                              },
-                                            ),
-                                          ),
-                                        ],
-                                      )
+
                                     ],
                                   ),
                                 ),

@@ -136,7 +136,7 @@ class _OrdersCloseState extends State<OrdersClose> {
     fieldText.clear();
   }
 
- intl.DateFormat dateFormat = new intl.DateFormat("dd-MM-yyyy");
+ intl.DateFormat dateFormat = new intl.DateFormat("dd-MM-yy");
 
   onItemChanged(String value) {
     setState(() {
@@ -226,32 +226,69 @@ class _OrdersCloseState extends State<OrdersClose> {
                         ),
                         child: ListTile(
                             contentPadding: EdgeInsets.zero,
-                            title: Text(
-                              "OrderId- " +
-                                  data.Id +
-                                  "  " +
-                                  "Date: " +
-                                  dateFormat.format(new intl.DateFormat(
-                                      "yyyy-MM-dd")
-                                      .parse(data
-                                      .OrderDateAndTime)), //new intl.DateFormat("yyyy/MM/dd", "en_US").parse(project[index].OrderDateAndTime)) ,
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FontStyle.italic),
-                              textAlign: TextAlign.center,
-                              textDirection: TextDirection.ltr,
+                            title: Padding(
+                              padding: const EdgeInsets.fromLTRB(50, 0, 58, 0),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      data.FullName, //new intl.DateFormat("yyyy/MM/dd", "en_US").parse(project[index].OrderDateAndTime)) ,
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w500,
+                                          fontStyle: FontStyle.normal),
+                                      textAlign: TextAlign.start,
+                                      textDirection: TextDirection.ltr,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 53,
+                                  ),
+                                  Text(
+                                    data.Id,
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                        fontStyle: FontStyle.normal),
+                                    textAlign: TextAlign.end,
+                                    textDirection: TextDirection.ltr,
+                                  ),
+
+                                ],
+                              ),
                             ),
-                            subtitle: Text(
-                              data.Phone +
-                                  " - " +
-                                  data.FullName,
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontStyle: FontStyle.normal),
-                              textAlign: TextAlign.center,
+                            subtitle: Padding(
+                              padding: const EdgeInsets.fromLTRB(50, 0, 20, 0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    data.Phone ,
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.black,
+                                        fontStyle: FontStyle.normal),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                  SizedBox(
+                                    width: 100,
+                                  ),
+                                  Text(
+                                    dateFormat.format(new intl.DateFormat(
+                                        "yyyy-MM-dd")
+                                        .parse(data
+                                        .OrderDateAndTime)),
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.black,
+                                        fontStyle: FontStyle.normal),
+                                  ),
+                                ],
+                              ),
                             ),
                             onTap: () {
                               selectedOrderId=data.Id;
