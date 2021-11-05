@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
     List<dynamic> responseList = await GetOrderItems(apiToken,selectedDataModel.Id); //FOOD_DATA;
     List<Widget> listItems = [];
     responseList.forEach((post) {
-      print("getPostsData===>");
+      print("getPostsData ===>");
       print(post.ItemName);
 
       listItems.add(Container(
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
               ]),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      width: 200,
+                      width: 150,
                       child: Expanded(
                         child: Text(
                           post.ItemName,
