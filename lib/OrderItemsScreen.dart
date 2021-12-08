@@ -114,14 +114,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     SizedBox(
                       width: 200,
-                      child: Expanded(
+                      //child: Expanded(
                         child: Text(
                           post.ItemName,
 
                           style: const TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
                         ),
-                      ),
+                      //),
                     ),
                     SizedBox(
                       height: 8,
@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 80,
+                          width: 40,
                         ),
                         Text(
                           "\₹ ${post.ItemCost}",
@@ -149,8 +149,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Container(
-                    width: 90,
-                    height: 100,
+                    width: 80,
+                    height: 90,
                     child: Image.network(
                       post.ItemImage,
                     ),
