@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.simpfo.halliangadi">
+    package="com.simpfo.fleshandfresh">
    <application
         android:label="Simpfo Ecommerce"
         android:icon="@mipmap/launcher_icon">

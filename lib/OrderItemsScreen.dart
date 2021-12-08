@@ -114,14 +114,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     SizedBox(
                       width: 150,
-                      child: Expanded(
+                      //child: Expanded(
                         child: Text(
                           post.ItemName,
 
                           style: const TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                              fontSize: 15, fontWeight: FontWeight.bold),
                         ),
-                      ),
+                      //),
                     ),
                     SizedBox(
                       height: 8,
@@ -131,16 +131,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         Text(
                           post.qty + " " + post.UnitTypeName,
                           style: const TextStyle(
-                              fontSize: 24,
+                              fontSize: 18,
                               color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          width: 80,
+                          width: 40,
                         ),
                         Text(
                           "\₹ ${post.ItemCost}",
-                          style: const TextStyle(fontSize: 19, color: Colors.grey),
+                          style: const TextStyle(fontSize: 18, color: Colors.grey),
                         ),
                       ],
                     ),
@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Container(
-                    width: 90,
+                    width: 80,
                     height: 100,
                     child: Image.network(
                       post.ItemImage,
@@ -256,11 +256,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Align(
                               heightFactor: 0.7,
                               alignment: Alignment.topCenter,
-                              child: itemsData[index]),
+                              child: itemsData[index]
+                          ),
                         ),
                       );
-                    })),
+                    }
+                    )
+            ),
           ],
+
         ),
       ),
     );
