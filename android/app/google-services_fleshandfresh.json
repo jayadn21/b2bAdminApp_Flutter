@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "457135252466",
+    "project_id": "fleshandfresh",
+    "storage_bucket": "fleshandfresh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457135252466:android:cf6eef0245cf39ee2ec16b",
+        "android_client_info": {
+          "package_name": "com.simpfo.fleshandfresh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457135252466-q5r67gmc8heqh75h37hd7k10lcvmijic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMAnbe95HYVzFJKBV_neU6BSeO-FgASRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457135252466-q5r67gmc8heqh75h37hd7k10lcvmijic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

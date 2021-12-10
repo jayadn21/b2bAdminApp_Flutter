@@ -1,4 +1,4 @@
-package com.simpfo.halliangadi;
+package com.simpfo.halliorganics;
 
 import io.flutter.embedding.android.FlutterActivity
 
