@@ -20,8 +20,8 @@ import 'SplashScreen.dart';
 //Global Varibales
 /*String baseUrl="https://testapi.slrorganicfarms.com";*/
 /*String baseUrl="https://nithinb2capi.simpfo.in";*/
-//String baseUrl="https://api.halliangadi.in/";
-String baseUrl="https://halliorganicsapi.simpfo.in/";
+String baseUrl="https://halliangadiapi.simpfo.in/";
+//String baseUrl="https://halliorganicsapi.simpfo.in/";
 String phoneNumberVerified;
 String phoneNumEntered;
 String apiToken;
