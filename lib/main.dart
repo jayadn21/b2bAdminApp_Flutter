@@ -20,8 +20,9 @@ import 'SplashScreen.dart';
 //Global Varibales
 /*String baseUrl="https://testapi.slrorganicfarms.com";*/
 /*String baseUrl="https://nithinb2capi.simpfo.in";*/
-String baseUrl="https://halliangadiapi.simpfo.in/";
+//String baseUrl="https://halliangadiapi.simpfo.in/";
 //String baseUrl="https://halliorganicsapi.simpfo.in/";
+String baseUrl="https://biowiseapi.simpfo.in/";
 String phoneNumberVerified;
 String phoneNumEntered;
 String apiToken;
@@ -86,11 +87,11 @@ Future<bool> Login(BuildContext context,String mobilenumber) async {
 
         } else {
           /*GetOrders(token);*/
-          UserFullName=dataArr["FirstName"]+" "+dataArr["LastName"];
+          UserFullName=dataArr["FirstName"] ?? "" + " " + dataArr["LastName"] ?? "";
           userId=dataArr["UserId"];
           compName=dataArr["CompanyName"];
           compAddress=dataArr["Branch_address"];
-          if(newSignin)
+          //if(newSignin)
           setFirebaseMsgKey();
           return true;
         }

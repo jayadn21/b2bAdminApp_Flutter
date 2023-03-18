@@ -15,7 +15,7 @@ $cd android; ./gradlew signingReport
     3. Generate .keystore file, copy the file in android/app folder, update the keystore file name and alias in signingConfigs section of android/app/build.gradle file
     4. Generate the SHA Key and add the same to firebase android app settings ($cd android; ./gradlew signingReport)
     5. Update the android/app/google-services.json file with corresponding firebase settings
-
+    6. Update config.firebaseCloudMsgServerKey in server config.js, get Cloud Messaging AP Token from firebase Project settings -> Cloud Messaging tab
 
 ====================SHA Keys====================
 nithinorganics:
@@ -39,8 +39,13 @@ SHA1: B8:77:1B:93:64:65:A7:66:7E:E7:13:45:1E:78:97:78:48:86:9E:72
 SHA-256: 78:A1:D6:C0:59:57:08:54:8A:FC:77:74:2C:DE:89:E6:D0:82:5D:DB:62:E7:28:DA:A4:7D:8D:4F:DF:3A:4E:59
 Valid until: Friday, February 26, 2049
 ==================================
-
 halliangadi
+com.simpfo.halliangadi
+
+storeFile file('halliangadi.keystore')
+storePassword 'S!mpf0@2019'
+keyAlias 'simpfohalliangadikeystore'
+keyPassword 'S!mpf0@2019'
 
 Variant: debug
 Config: debug
@@ -100,4 +105,29 @@ MD5: 9E:B3:77:61:B6:47:E5:D3:DC:78:68:DE:95:70:16:4D
 SHA1: 6E:66:FF:09:EA:1B:2A:6B:22:D4:41:D1:05:BB:EE:DC:4D:80:59:AD
 SHA-256: 7F:E7:5A:30:B7:E4:38:6E:33:7A:6D:C3:BF:40:FF:03:44:E6:F7:DD:BB:CE:BB:73:EB:34:0B:8C:7C:9F:6C:B3
 Valid until: Tuesday, 27 April, 2049
+----------
+==================================================
+Biowise
+keytool -genkey -v -keystore biowise.keystore -alias simpfobiowisefltrkeystore -keyalg RSA -keysize 2048 -validity 10000
+Simpfo@2022
+
+com.simpfo.biowise
+
+Variant: debug
+Config: debug
+Store: D:\Simpfo\Src\ecommerce_b2b\b2c_nihin\b2b_admin_flutter_jayadn21\b2bAdminApp_Flutter\android\app\biowise.keystore
+Alias: simpfobiowisefltrkeystore
+MD5: A5:7A:BA:DE:85:18:DF:45:7F:4A:2E:C1:68:C1:BE:16
+SHA1: 75:13:E6:A3:DA:98:1A:D2:EB:12:48:94:3E:E5:74:F8:C5:42:E7:C4
+SHA-256: AB:FD:A9:E2:2A:3B:5D:79:1B:48:0B:9C:F2:BC:FD:D8:6A:BD:58:16:AC:42:04:5E:79:55:8C:BF:4C:BC:0F:92
+Valid until: Monday, 1 August, 2050
+----------
+Variant: release
+Config: release
+Store: D:\Simpfo\Src\ecommerce_b2b\b2c_nihin\b2b_admin_flutter_jayadn21\b2bAdminApp_Flutter\android\app\biowise.keystore
+Alias: simpfobiowisefltrkeystore
+MD5: A5:7A:BA:DE:85:18:DF:45:7F:4A:2E:C1:68:C1:BE:16
+SHA1: 75:13:E6:A3:DA:98:1A:D2:EB:12:48:94:3E:E5:74:F8:C5:42:E7:C4
+SHA-256: AB:FD:A9:E2:2A:3B:5D:79:1B:48:0B:9C:F2:BC:FD:D8:6A:BD:58:16:AC:42:04:5E:79:55:8C:BF:4C:BC:0F:92
+Valid until: Monday, 1 August, 2050
 ----------

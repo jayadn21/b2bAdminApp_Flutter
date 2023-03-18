@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.simpfo.halliangadi">
+    package="com.simpfo.biowise">
    <application
-        android:label=" HalliAngadi Simpfo Ecommerce"
+        android:label="Biowise Simpfo Ecommerce"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 200,
                       //child: Expanded(
                         child: Text(
-                          post.ItemName,
+                          post.ItemName + " " + (post.ProductCode == "null" ? "" : "- " + post.ProductCode),
 
                           style: const TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold),
@@ -518,7 +518,7 @@ class CategoriesScroller extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "OrderAddress: ",
+                                "Order Address: ",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.white,
